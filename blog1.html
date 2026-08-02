@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>The Missing Millions | United Ballots</title>
+
+<meta name="description" content="The Missing Millions: Why Young Voters Are Walking Away From British Elections. United Ballots Research, July 2026.">
+
+<style>
+    /* =========================================
+       ROOT COLORS
+    ========================================= */
+    :root {
+        --primary: #72ADCA;
+        --secondary: #A4CCE0;
+        --accent: #56778F;
+        --light: #E1EDF2;
+        --dark: #252A29;
+        --white: #ffffff;
+        --text: #3d4548;
+        --border: #d8e4e9;
+        --shadow: 0 15px 45px rgba(37, 42, 41, 0.08);
+    }
+
+    /* =========================================
+       RESET
+    ========================================= */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "Inter", "Segoe UI", Arial, sans-serif;
+        background: #f8fbfc;
+        color: var(--text);
+        line-height: 1.8;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    /* =========================================
+       HEADER
+    ========================================= */
+    .site-header {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 18px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        color: var(--dark);
+    }
+
+    .logo span {
+        color: var(--primary);
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .main-nav a {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--dark);
+        transition: 0.25s ease;
+    }
+
+    .main-nav a:hover {
+        color: var(--accent);
+    }
+
+    .menu-toggle {
+        display: none;
+        border: none;
+        background: transparent;
+        font-size: 28px;
+        cursor: pointer;
+        color: var(--dark);
+    }
+
+    /* =========================================
+       BLOG HERO
+    ========================================= */
+    .blog-hero {
+        background:
+            linear-gradient(
+                135deg,
+                rgba(114, 173, 202, 0.18),
+                rgba(225, 237, 242, 0.85)
+            );
+        padding: 90px 25px 80px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .breadcrumb {
+        margin-bottom: 25px;
+        font-size: 14px;
+        color: var(--accent);
+        font-weight: 600;
+    }
+
+    .breadcrumb a {
+        color: var(--accent);
+    }
+
+    .breadcrumb span {
+        margin: 0 8px;
+        color: #82939b;
+    }
+
+    .blog-category {
+        display: inline-block;
+        padding: 7px 16px;
+        margin-bottom: 22px;
+        border-radius: 50px;
+        background: var(--white);
+        color: var(--accent);
+        border: 1px solid rgba(86, 119, 143, 0.2);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .blog-hero h1 {
+        max-width: 900px;
+        margin: 0 auto 25px;
+        color: var(--dark);
+        font-size: clamp(38px, 6vw, 68px);
+        line-height: 1.1;
+        letter-spacing: -2px;
+        font-weight: 800;
+    }
+
+    .blog-intro {
+        max-width: 760px;
+        margin: auto;
+        color: #58666c;
+        font-size: 19px;
+        line-height: 1.7;
+    }
+
+    .article-meta {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 25px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* =========================================
+       ARTICLE LAYOUT
+    ========================================= */
+    .article-section {
+        padding: 75px 25px;
+    }
+
+    .article-layout {
+        max-width: 1150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: minmax(0, 780px) 280px;
+        gap: 70px;
+        align-items: start;
+    }
+
+    .article-content {
+        background: var(--white);
+        padding: 55px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+    }
+
+    .article-content p {
+        margin-bottom: 25px;
+        font-size: 17px;
+        line-height: 1.9;
+        color: var(--text);
+    }
+
+    .article-content h2 {
+        margin: 50px 0 22px;
+        font-size: 32px;
+        line-height: 1.25;
+        color: var(--dark);
+        letter-spacing: -0.7px;
+    }
+
+    .article-content h3 {
+        margin: 40px 0 18px;
+        font-size: 23px;
+        color: var(--accent);
+    }
+
+    .article-content strong {
+        color: var(--dark);
+    }
+
+    /* =========================================
+       HIGHLIGHT BOX
+    ========================================= */
+    .article-highlight {
+        margin: 35px 0;
+        padding: 30px;
+        border-left: 5px solid var(--primary);
+        background: var(--light);
+        border-radius: 0 14px 14px 0;
+    }
+
+    .article-highlight p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.7;
+        color: var(--dark);
+        font-weight: 600;
+    }
+
+    /* =========================================
+       STATISTICS
+    ========================================= */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin: 35px 0 45px;
+    }
+
+    .stat-card {
+        padding: 25px 18px;
+        background: var(--light);
+        border-radius: 14px;
+        text-align: center;
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 800;
+        color: var(--accent);
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text);
+        font-weight: 600;
+    }
+
+    /* =========================================
+       SIDEBAR
+    ========================================= */
+    .article-sidebar {
+        position: sticky;
+        top: 110px;
+    }
+
+    .sidebar-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-card h3 {
+        color: var(--dark);
+        font-size: 19px;
+        margin-bottom: 18px;
+    }
+
+    .sidebar-card ul {
+        list-style: none;
+    }
+
+    .sidebar-card li {
+        margin-bottom: 12px;
+    }
+
+    .sidebar-card a {
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .sidebar-card a:hover {
+        color: var(--primary);
+    }
+
+    .back-button {
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 50px;
+        background: var(--primary);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 700;
+        transition: 0.25s ease;
+    }
+
+    .back-button:hover {
+        background: var(--accent);
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+    .site-footer {
+        background:
+            linear-gradient(
+                135deg,
+                var(--dark),
+                var(--accent)
+            );
+        color: var(--white);
+        padding: 55px 25px 25px;
+    }
+
+    .footer-container {
+        max-width: 1150px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-brand h3 {
+        font-size: 25px;
+        margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+        max-width: 450px;
+        color: rgba(255,255,255,0.75);
+        font-size: 14px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        color: rgba(255,255,255,0.85);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .footer-links a:hover {
+        color: var(--white);
+    }
+
+    .copyright {
+        max-width: 1150px;
+        margin: 35px auto 0;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        text-align: center;
+        color: rgba(255,255,255,0.6);
+        font-size: 13px;
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+    @media (max-width: 900px) {
+        .article-layout {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
+        .article-sidebar {
+            position: static;
+        }
+
+        .sidebar-card {
+            max-width: 780px;
+            margin: 0 auto 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main-nav {
+            display: none;
+            position: absolute;
+            top: 73px;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            padding: 25px;
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .main-nav.active {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .blog-hero {
+            padding: 65px 20px;
+        }
+
+        .blog-hero h1 {
+            letter-spacing: -1px;
+        }
+
+        .blog-intro {
+            font-size: 17px;
+        }
+
+        .article-section {
+            padding: 45px 15px;
+        }
+
+        .article-content {
+            padding: 30px 22px;
+            border-radius: 15px;
+        }
+
+        .article-content p {
+            font-size: 16px;
+        }
+
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- =========================================
+     HEADER
+========================================== -->
+<header class="site-header">
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            United <span>Ballots</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =========================================
+     BLOG HERO
+========================================== -->
+<section class="blog-hero">
+
+    <div class="hero-inner">
+
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="blogs.html">Blogs</a>
+            <span>/</span>
+            The Missing Millions
+        </div>
+
+        <span class="blog-category">
+            United Ballots Research
+        </span>
+
+        <h1>
+            The Missing Millions: Why Young Voters Are Walking Away From British Elections
+        </h1>
+
+        <p class="blog-intro">
+            In 2024, the number of young people who participated in elections fell to levels
+            that had not been seen in ten years. A widening gap between engaged and
+            disengaged British citizens is being revealed by data.
+        </p>
+
+        <div class="article-meta">
+            <span>Research conducted by United Ballots</span>
+            <span>July 2026</span>
+            <span>6-minute read</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ARTICLE
+========================================== -->
+<main class="article-section">
+
+    <div class="article-layout">
+
+        <article class="article-content">
+
+            <div class="article-highlight">
+                <p>
+                    The 2024 election revealed a widening participation gap between younger
+                    and older voters, with the decline concentrated among groups that were
+                    already less likely to vote.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span class="stat-number">37%</span>
+                    <span class="stat-label">
+                        18–24-year-olds participating in 2024
+                    </span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">41%</span>
+                    <span class="stat-label">
+                        Participation among 25–34-year-olds
+                    </span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number">59.7%</span>
+                    <span class="stat-label">
+                        Registered voter turnout in 2024
+                    </span>
+                </div>
+
+            </div>
+
+
+            <p>
+                According to Ipsos, the percentage of people aged 18 to 24 who participated
+                in the general election in 2024 was lower than the 47% who did so in 2019.
+                Inconsistently, it remained at home, and the difference is due to its age.
+            </p>
+
+            <p>
+                A total of 59.7% of registered voters participated in the general election
+                held in 2024, as reported by the House of Commons Library. This represents
+                the lowest turnout since 2001 and a 7.6% decrease from the previous year.
+                Taking into account all adults, rather than just those who are registered to
+                vote, makes the picture more stark.
+            </p>
+
+            <p>
+                The analysis conducted by IPPR titled "Half of Us" discovered that only
+                fifty percent of adults in the United Kingdom cast their ballots, which is
+                the lowest percentage since the implementation of universal suffrage.
+                Only three out of every five registered voters actually cast their ballots.
+                According to IPPR, if they had represented themselves as a party,
+                non-voters would have been the largest party in the country.
+            </p>
+
+
+            <h2>
+                The gap is growing, not a new one
+            </h2>
+
+            <p>
+                Across all generations, there was no uniform distribution of anything.
+                Ipsos, a company that has forecasted voting patterns at every general
+                election since 1979, conducted a post-election survey and discovered that
+                the voting patterns of people over the age of 55 were comparable in 2024
+                as they were in 2019.
+            </p>
+
+            <p>
+                The number of voters under the age of 55, particularly younger voters,
+                decreased. The majority of the decade's slow gains in youth participation
+                were erased when the percentage of 18–24-year-olds who participated in
+                elections dropped to 37% in 2024, a level that had not been seen since
+                2015. During that period of time, the participation rate of individuals
+                aged 25–34 years decreased from 55% to 41%.
+            </p>
+
+            <p>
+                The pattern has been around for a long time, but the fall of 2024 was
+                significant. In every general election that has taken place since 1979,
+                the data collected by Ipsos demonstrates that voter participation increases
+                with age almost invariably, and that the gap between the oldest and
+                youngest voters has rarely narrowed.
+            </p>
+
+            <p>
+                There was no narrowing of the gap between engaged and disengaged citizens
+                in Britain in 2024, as the lowest voter turnout was seen among groups that
+                were already the least likely to vote. It grew stronger.
+            </p>
+
+
+            <h2>
+                Wealth, home ownership and age
+            </h2>
+
+            <p>
+                The analysis conducted by IPPR at the constituency level reveals that voter
+                participation was closely associated with factors such as wealth, home
+                ownership, and age at the neighborhood level, not just on a national scale.
+            </p>
+
+            <p>
+                Constituencies that had a greater number of residents who were older,
+                homeowners, and settled were able to surpass the national figure, whereas
+                those that had populations that were younger and more transient would not
+                have qualified.
+            </p>
+
+            <p>
+                Ipsos found that C2DEs had a turnout rate of 47%, while ABs had a turnout
+                rate of 67%, and renters had a turnout rate of 38%, while owner-occupiers
+                had a turnout rate of 71% as compared to renters.
+            </p>
+
+
+            <h2>
+                Beyond the number that is featured in the headlines, the significance
+            </h2>
+
+            <p>
+                It is possible to create a Parliament that is structurally more responsive
+                to those who consistently show up if younger voters are not adequately
+                represented.
+            </p>
+
+            <p>
+                In practice, if not always out loud, politicians of all parties are aware
+                that an older homeowner is a safer electoral bet to court than a 22-year-old
+                renter. This is not because the concerns of the former group are less
+                important than those of the latter group; rather, it is because one group
+                votes more reliably than the other.
+            </p>
+
+            <p>
+                Over the course of multiple Parliaments, asymmetry can be used to determine
+                which issues receive sustained political attention and which are merely
+                optional decisions.
+            </p>
+
+            <p>
+                Therefore, researchers should avoid drawing conclusions based on a single
+                election because there has not been a single cause that has been identified
+                for the decline.
+            </p>
+
+            <p>
+                Ipsos notes that survey-based turnout estimates have a larger margin of
+                error than headline vote-share figures. This is due to the fact that people
+                who are politically engaged are more likely to respond to post-election
+                polling.
+            </p>
+
+            <p>
+                Nevertheless, the research is characterized by a number of recurring themes.
+                Due to the fact that younger voters move more frequently and are more likely
+                to fall off the electoral register between elections, the International
+                Political and Political Research (IPPR) recommends specifically automatic
+                or assisted voter registration.
+            </p>
+
+            <p>
+                The removal of this administrative barrier is utilized by a number of
+                democracies that are comparable.
+            </p>
+
+            <p>
+                There is a lack of routine among younger voters, which is what keeps older
+                voters coming back to the polls. The fact that leaflets, local press, and
+                traditional broadcast debate formats were not designed for a significant
+                portion of younger voters is something that this series brings up again and
+                again in its examination of digital campaigning.
+            </p>
+
+
+            <h2>
+                Interpretation of the data
+            </h2>
+
+            <p>
+                A single election cycle resulted in a ten percentage point increase in the
+                number of voters aged 18 to 24.
+            </p>
+
+            <p>
+                When it comes to moving a volatile demographic in this manner, voter contact
+                strategies that are based on the final months of a campaign are beyond the
+                point of no return.
+            </p>
+
+            <div class="article-highlight">
+                <p>
+                    Rather than calling for a rewritten script closer to election day,
+                    the evidence suggests that sustained and credible engagement should
+                    take place long before a contest is called.
+                </p>
+            </div>
+
+            <h2>
+                The registration gap
+            </h2>
+
+            <p>
+                Data from registrations adds depth to the age narrative. Prior to a general
+                election that took place a few weeks later, the Electoral Commission
+                estimated in April 2024 that seven million eligible voters in England and
+                Wales were either absent, incomplete, or registered at the incorrect address.
+            </p>
+
+            <p>
+                As is the case with low turnout, under-registration is over-represented
+                among younger people, private renters, and recent movers.
+            </p>
+
+            <p>
+                This is due to the fact that the annual household canvass and postal
+                registration system assumes address stability, which is something that a
+                22-year-old renter is much less likely to have than a 68-year-old homeowner.
+            </p>
+
+            <p>
+                It is impossible for a voter to cast a ballot if they are not properly
+                registered, regardless of whether or not they intend to vote. Therefore,
+                a portion of the age gap in turnout figures is due to a registration gap
+                rather than a motivation gap.
+            </p>
+
+
+            <h2>
+                Turnout is not fixed
+            </h2>
+
+            <p>
+                Turnout is not a fixed fact of political life, which is something that
+                anyone who is concerned about British democracy rather than party fortunes
+                should bring to their attention.
+            </p>
+
+            <p>
+                Within a single cycle, it moved ten points among individuals aged 18 to 24.
+                If the manner in which, when, and by whom it is asked to vote of a cohort
+                that is disengaged in one election changes, then that cohort may change
+                its participation in the subsequent election.
+            </p>
+
+            <div class="article-highlight">
+                <p>
+                    The evidence presented in this analysis points towards sustained,
+                    credible engagement and reducing registration barriers as important
+                    considerations when addressing the participation gap among younger voters.
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+        <aside class="article-sidebar">
+
+            <div class="sidebar-card">
+
+                <h3>Article Details</h3>
+
+                <ul>
+                    <li>
+                        <strong>Research:</strong><br>
+                        United Ballots
+                    </li>
+
+                    <li>
+                        <strong>Published:</strong><br>
+                        July 2026
+                    </li>
+
+                    <li>
+                        <strong>Reading time:</strong><br>
+                        6 minutes
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="sidebar-card">
+
+                <h3>In This Article</h3>
+
+                <ul>
+                    <li>
+                        <a href="#top">The Missing Millions</a>
+                    </li>
+
+                    <li>
+                        <a href="#top">The Growing Gap</a>
+                    </li>
+
+                    <li>
+                        <a href="#top">Wealth & Home Ownership</a>
+                    </li>
+
+                    <li>
+                        <a href="#top">The Registration Gap</a>
+                    </li>
+
+                    <li>
+                        <a href="#top">Interpretation of the Data</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="sidebar-card">
+
+                <h3>Explore More</h3>
+
+                <a href="blogs.html" class="back-button">
+                    ← Back to Blogs
+                </a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <h3>United Ballots</h3>
+
+            <p>
+                Research, insight and analysis on elections,
+                political participation and democratic engagement.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 United Ballots. All rights reserved.
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
+<script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+        mainNav.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".main-nav a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            mainNav.classList.remove("active");
+        });
+    });
+
+</script>
+```
+
+</body>
+</html>
