@@ -1,0 +1,1038 @@
+/* =====================================================
+   UNITED BALLOTS
+   BRAND FOUNDATION SECTION
+====================================================== */
+
+.ub-foundation-section {
+
+    position: relative;
+
+    height: 650px;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--white) 0%,
+            var(--off-white) 60%,
+            #f2f5f8 100%
+        );
+
+    color: var(--navy);
+
+    isolation: isolate;
+
+}
+
+
+/* =====================================================
+   BACKGROUND ORB
+====================================================== */
+
+.ub-foundation-orb {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -250px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(
+                200,
+                16,
+                46,
+                0.07
+            ) 0%,
+            rgba(
+                200,
+                16,
+                46,
+                0.025
+            ) 40%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+====================================================== */
+
+.ub-foundation-container {
+
+    width:
+
+        min(
+            calc(100% - 80px),
+            var(--container)
+        );
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+
+        0.28fr
+        0.72fr;
+
+    gap:
+
+        clamp(
+            60px,
+            8vw,
+            130px
+        );
+
+    align-items: center;
+
+}
+
+
+/* =====================================================
+   LEFT SIDE
+====================================================== */
+
+.ub-foundation-side {
+
+    position: relative;
+
+    height: 100%;
+
+    padding:
+
+        70px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================================
+   NUMBER
+====================================================== */
+
+.ub-foundation-number {
+
+    color:
+
+        var(--red);
+
+    font-family:
+
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+
+        clamp(
+            6rem,
+            9vw,
+            9rem
+        );
+
+    font-weight: 400;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.08em;
+
+}
+
+
+/* =====================================================
+   SIDE LINE
+====================================================== */
+
+.ub-foundation-side-line {
+
+    position: absolute;
+
+    left: 10px;
+
+    top: 190px;
+
+    bottom: 120px;
+
+    width: 1px;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            var(--red),
+            rgba(
+                7,
+                26,
+                58,
+                0.08
+            )
+        );
+
+}
+
+
+/* =====================================================
+   SIDE LABEL
+====================================================== */
+
+.ub-foundation-side-label {
+
+    color:
+
+        var(--muted);
+
+    font-size:
+
+        9px;
+
+    font-weight:
+
+        800;
+
+    letter-spacing:
+
+        0.2em;
+
+    text-transform:
+
+        uppercase;
+
+    writing-mode:
+
+        vertical-rl;
+
+    transform:
+
+        rotate(180deg);
+
+}
+
+
+/* =====================================================
+   CONTENT
+====================================================== */
+
+.ub-foundation-content {
+
+    max-width:
+
+        850px;
+
+    padding:
+
+        50px 0;
+
+}
+
+
+/* =====================================================
+   EYEBROW
+====================================================== */
+
+.ub-foundation-eyebrow {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        12px;
+
+    margin-bottom:
+
+        22px;
+
+    color:
+
+        var(--red);
+
+    font-size:
+
+        10px;
+
+    font-weight:
+
+        800;
+
+    letter-spacing:
+
+        0.18em;
+
+    text-transform:
+
+        uppercase;
+
+}
+
+
+.ub-foundation-eyebrow span {
+
+    width:
+
+        35px;
+
+    height:
+
+        2px;
+
+    background:
+
+        var(--red);
+
+}
+
+
+/* =====================================================
+   MAIN HEADING
+====================================================== */
+
+.ub-foundation-content h2 {
+
+    max-width:
+
+        820px;
+
+    margin:
+
+        0 0 32px;
+
+    color:
+
+        var(--navy);
+
+    font-family:
+
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+
+        clamp(
+            3rem,
+            5.2vw,
+            5.4rem
+        );
+
+    font-weight:
+
+        700;
+
+    line-height:
+
+        0.98;
+
+    letter-spacing:
+
+        -0.055em;
+
+}
+
+
+/* =====================================================
+   RED EMPHASIS
+====================================================== */
+
+.ub-foundation-content h2 em {
+
+    color:
+
+        var(--red);
+
+    font-style:
+
+        normal;
+
+}
+
+
+/* =====================================================
+   COPY
+====================================================== */
+
+.ub-foundation-copy {
+
+    max-width:
+
+        760px;
+
+}
+
+
+.ub-foundation-copy p {
+
+    margin:
+
+        0 0 18px;
+
+    color:
+
+        var(--muted);
+
+    font-size:
+
+        14px;
+
+    font-weight:
+
+        500;
+
+    line-height:
+
+        1.75;
+
+}
+
+
+/* =====================================================
+   HIGHLIGHT
+====================================================== */
+
+.ub-foundation-highlight {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        15px;
+
+    margin:
+
+        22px 0 22px;
+
+}
+
+
+.ub-highlight-line {
+
+    width:
+
+        42px;
+
+    height:
+
+        2px;
+
+    flex-shrink:
+
+        0;
+
+    background:
+
+        var(--red);
+
+}
+
+
+.ub-foundation-highlight strong {
+
+    color:
+
+        var(--red);
+
+    font-size:
+
+        15px;
+
+    font-weight:
+
+        800;
+
+    letter-spacing:
+
+        -0.01em;
+
+}
+
+
+/* =====================================================
+   FOOTER PHILOSOPHY
+====================================================== */
+
+.ub-foundation-footer {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        12px;
+
+    margin-top:
+
+        28px;
+
+    padding-top:
+
+        18px;
+
+    border-top:
+
+        1px solid
+        var(--border);
+
+}
+
+
+.ub-foundation-footer span {
+
+    color:
+
+        var(--navy);
+
+    font-size:
+
+        9px;
+
+    font-weight:
+
+        800;
+
+    letter-spacing:
+
+        0.14em;
+
+    text-transform:
+
+        uppercase;
+
+}
+
+
+.ub-foundation-footer i {
+
+    width:
+
+        4px;
+
+    height:
+
+        4px;
+
+    flex-shrink:
+
+        0;
+
+    border-radius:
+
+        50%;
+
+    background:
+
+        var(--red);
+
+}
+
+
+/* =====================================================
+   SUBTLE REVEAL
+====================================================== */
+
+.ub-foundation-content {
+
+    animation:
+
+        ubFoundationContent
+        0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        both;
+
+}
+
+
+.ub-foundation-side {
+
+    animation:
+
+        ubFoundationSide
+        0.8s
+        ease
+        both;
+
+}
+
+
+@keyframes ubFoundationContent {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(
+                30px
+            );
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(
+                0
+            );
+
+    }
+
+}
+
+
+@keyframes ubFoundationSide {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateX(
+                -25px
+            );
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateX(
+                0
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 1000px) {
+
+    .ub-foundation-section {
+
+        height:
+
+            650px;
+
+    }
+
+
+    .ub-foundation-container {
+
+        width:
+
+            calc(
+                100% - 50px
+            );
+
+        grid-template-columns:
+
+            0.22fr
+            0.78fr;
+
+        gap:
+
+            50px;
+
+    }
+
+
+    .ub-foundation-number {
+
+        font-size:
+
+            6rem;
+
+    }
+
+
+    .ub-foundation-content h2 {
+
+        font-size:
+
+            clamp(
+                2.8rem,
+                5.5vw,
+                4.5rem
+            );
+
+    }
+
+
+    .ub-foundation-copy p {
+
+        font-size:
+
+            13px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 700px) {
+
+    .ub-foundation-section {
+
+        height:
+
+            auto;
+
+        min-height:
+
+            650px;
+
+        padding:
+
+            70px 0;
+
+    }
+
+
+    .ub-foundation-container {
+
+        width:
+
+            calc(
+                100% - 32px
+            );
+
+        height:
+
+            auto;
+
+        display:
+
+            flex;
+
+        flex-direction:
+
+            column;
+
+        align-items:
+
+            stretch;
+
+        gap:
+
+            35px;
+
+    }
+
+
+    /* LEFT SIDE */
+
+    .ub-foundation-side {
+
+        height:
+
+            auto;
+
+        padding:
+
+            0;
+
+        display:
+
+            flex;
+
+        flex-direction:
+
+            row;
+
+        align-items:
+
+            center;
+
+        justify-content:
+
+            space-between;
+
+    }
+
+
+    .ub-foundation-number {
+
+        font-size:
+
+            5rem;
+
+        line-height:
+
+            0.7;
+
+    }
+
+
+    .ub-foundation-side-line {
+
+        display:
+
+            none;
+
+    }
+
+
+    .ub-foundation-side-label {
+
+        writing-mode:
+
+            horizontal-tb;
+
+        transform:
+
+            none;
+
+        font-size:
+
+            8px;
+
+        text-align:
+
+            right;
+
+    }
+
+
+    /* CONTENT */
+
+    .ub-foundation-content {
+
+        padding:
+
+            0;
+
+    }
+
+
+    .ub-foundation-eyebrow {
+
+        margin-bottom:
+
+            18px;
+
+        font-size:
+
+            9px;
+
+    }
+
+
+    .ub-foundation-eyebrow span {
+
+        width:
+
+            25px;
+
+    }
+
+
+    .ub-foundation-content h2 {
+
+        margin-bottom:
+
+            25px;
+
+        font-size:
+
+            clamp(
+                2.7rem,
+                11vw,
+                4rem
+            );
+
+        line-height:
+
+            1.02;
+
+    }
+
+
+    .ub-foundation-copy p {
+
+        font-size:
+
+            13px;
+
+        line-height:
+
+            1.7;
+
+    }
+
+
+    .ub-foundation-highlight {
+
+        margin:
+
+            20px 0;
+
+    }
+
+
+    .ub-foundation-highlight strong {
+
+        font-size:
+
+            14px;
+
+    }
+
+
+    .ub-foundation-footer {
+
+        margin-top:
+
+            25px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 380px) {
+
+    .ub-foundation-section {
+
+        padding:
+
+            60px 0;
+
+    }
+
+
+    .ub-foundation-container {
+
+        width:
+
+            calc(
+                100% - 24px
+            );
+
+    }
+
+
+    .ub-foundation-content h2 {
+
+        font-size:
+
+            2.55rem;
+
+    }
+
+
+    .ub-foundation-copy p {
+
+        font-size:
+
+            12px;
+
+    }
+
+
+    .ub-foundation-footer {
+
+        gap:
+
+            8px;
+
+    }
+
+
+    .ub-foundation-footer span {
+
+        font-size:
+
+            7px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ub-foundation-content,
+    .ub-foundation-side {
+
+        animation:
+
+            none;
+
+    }
+
+}

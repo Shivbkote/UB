@@ -1,0 +1,112 @@
+/* ===================================================== SHORT BLOG FOOTER ====================================================== */
+.blog-footer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #071522, #0b1d2d);
+    color: #ffffff;
+    padding: 38px 0 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Main Footer */
+.blog-footer-inner {
+    width: min(1100px, 90%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Brand */
+.blog-footer-brand a {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    transition: 0.3s ease;
+}
+
+.blog-footer-brand a:hover {
+    transform: translateX(3px);
+}
+
+.blog-footer-brand a span {
+    color: #d62f3d;
+}
+
+.blog-footer-brand p {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+.blog-footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.blog-footer-nav a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Animated Underline */
+.blog-footer-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #d62f3d;
+    transition: width 0.3s ease;
+}
+
+.blog-footer-nav a:hover {
+    color: #ffffff;
+}
+
+.blog-footer-nav a:hover::after {
+    width: 100%;
+}
+
+/* Bottom */
+.blog-footer-bottom {
+    width: min(1100px, 90%);
+    margin: 25px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 11px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .blog-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .blog-footer-nav {
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+    .blog-footer-bottom {
+        flex-direction: column;
+        gap: 6px;
+    }
+}

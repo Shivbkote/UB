@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Public Affairs & Policy Briefs | United Ballots</title>
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <meta
+        name="description"
+        content="Research-led policy briefing papers, legislative and regulatory tracking, stakeholder mapping, and consultation-response drafting by United Ballots."
+    >
+
+    <style>
+
+        /* =====================================================
+           ROOT COLORS
+        ===================================================== */
+
+        :root {
+            --primary: #72ADCA;
+            --secondary: #A4CCE0;
+            --accent: #56778F;
+            --light: #E1EDF2;
+            --dark: #252A29;
+            --white: #ffffff;
+
+            --red: #c8102e;
+
+            --text: #3d484d;
+            --muted: #6b7b83;
+            --border: #dfe7ea;
+
+            --shadow:
+                0 20px 60px rgba(37, 42, 41, 0.08);
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Inter",
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background:
+                #f8fafb;
+
+            color:
+                var(--text);
+
+            line-height:
+                1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            width: 100%;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            border-bottom:
+                1px solid var(--border);
+
+            position:
+                sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width:
+                1200px;
+
+            margin:
+                auto;
+
+            padding:
+                18px 30px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+        }
+
+        .logo {
+            font-size:
+                25px;
+
+            font-weight:
+                800;
+
+            color:
+                var(--dark);
+        }
+
+        .logo span {
+            color:
+                var(--primary);
+        }
+
+        .navigation {
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                30px;
+        }
+
+        .navigation a {
+            font-size:
+                14px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--dark);
+
+            transition:
+                0.2s ease;
+        }
+
+        .navigation a:hover {
+            color:
+                var(--accent);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .service-hero {
+            background:
+                var(--white);
+
+            padding:
+                100px 25px 95px;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .hero-inner {
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+        }
+
+
+        /* SERVICE NUMBER */
+
+        .service-number {
+            color:
+                var(--red);
+
+            font-size:
+                18px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                4px;
+
+            margin-bottom:
+                30px;
+        }
+
+
+        /* HERO TITLE */
+
+        .hero-title {
+            max-width:
+                850px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(42px, 6vw, 76px);
+
+            line-height:
+                1.08;
+
+            letter-spacing:
+                -2px;
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                30px;
+        }
+
+
+        /* HERO DESCRIPTION */
+
+        .hero-description {
+            max-width:
+                800px;
+
+            font-size:
+                20px;
+
+            line-height:
+                1.8;
+
+            color:
+                var(--accent);
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .main-content {
+            padding:
+                90px 25px;
+        }
+
+        .container {
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+        }
+
+
+        /* =====================================================
+           WHAT IT IS
+        ===================================================== */
+
+        .what-section {
+            display:
+                grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap:
+                80px;
+
+            margin-bottom:
+                100px;
+        }
+
+        .section-label {
+            color:
+                var(--red);
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                15px;
+        }
+
+        .what-section h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                45px;
+
+            line-height:
+                1.2;
+
+            color:
+                var(--dark);
+        }
+
+        .what-text {
+            font-size:
+                18px;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--text);
+        }
+
+
+        /* =====================================================
+           DELIVERABLES
+        ===================================================== */
+
+        .deliverables-section {
+            margin-bottom:
+                100px;
+        }
+
+        .section-heading {
+            margin-bottom:
+                45px;
+        }
+
+        .section-heading h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                46px;
+
+            line-height:
+                1.2;
+
+            color:
+                var(--dark);
+        }
+
+        .deliverables-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                25px;
+        }
+
+        .deliverable-item {
+            padding:
+                35px;
+
+            background:
+                var(--white);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+        .deliverable-number {
+            color:
+                var(--red);
+
+            font-size:
+                14px;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                15px;
+        }
+
+        .deliverable-item h3 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                26px;
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                10px;
+        }
+
+        .deliverable-item p {
+            color:
+                var(--muted);
+
+            font-size:
+                15px;
+        }
+
+
+        /* =====================================================
+           IDEAL CLIENT
+        ===================================================== */
+
+        .client-section {
+            padding:
+                70px;
+
+            margin-bottom:
+                100px;
+
+            background:
+                var(--dark);
+
+            border-radius:
+                25px;
+
+            color:
+                var(--white);
+        }
+
+        .client-section .section-label {
+            color:
+                var(--secondary);
+        }
+
+        .client-section h2 {
+            max-width:
+                800px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                44px;
+
+            line-height:
+                1.2;
+
+            margin-bottom:
+                25px;
+        }
+
+        .client-section p {
+            max-width:
+                850px;
+
+            color:
+                rgba(255,255,255,0.78);
+
+            font-size:
+                18px;
+
+            line-height:
+                1.9;
+        }
+
+
+        /* =====================================================
+           PRICING
+        ===================================================== */
+
+        .pricing-section {
+            margin-bottom:
+                100px;
+        }
+
+        .pricing-card {
+            background:
+                var(--white);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                25px;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                var(--shadow);
+        }
+
+        .pricing-top {
+            padding:
+                35px 40px;
+
+            background:
+                var(--light);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .pricing-top h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                35px;
+
+            color:
+                var(--dark);
+        }
+
+        .price-row {
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+
+            padding:
+                30px 40px;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .price-row:last-child {
+            border-bottom:
+                none;
+        }
+
+        .price-description {
+            color:
+                var(--text);
+
+            font-size:
+                16px;
+        }
+
+        .price {
+            white-space:
+                nowrap;
+
+            color:
+                var(--accent);
+
+            font-size:
+                20px;
+
+            font-weight:
+                800;
+        }
+
+
+        /* =====================================================
+           IMPORTANT NOTE
+        ===================================================== */
+
+        .note-section {
+            margin-bottom:
+                100px;
+
+            padding:
+                40px;
+
+            background:
+                #fff8f8;
+
+            border-left:
+                5px solid var(--red);
+
+            border-radius:
+                0 18px 18px 0;
+        }
+
+        .note-section h3 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                28px;
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                15px;
+        }
+
+        .note-section p {
+            font-size:
+                16px;
+
+            line-height:
+                1.9;
+
+            color:
+                var(--text);
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta-section {
+            padding:
+                70px 40px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--accent)
+                );
+
+            border-radius:
+                28px;
+
+            text-align:
+                center;
+
+            color:
+                var(--white);
+        }
+
+        .cta-section h2 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                45px;
+
+            line-height:
+                1.2;
+
+            margin-bottom:
+                15px;
+        }
+
+        .cta-section p {
+            max-width:
+                700px;
+
+            margin:
+                0 auto 30px;
+
+            color:
+                rgba(255,255,255,0.9);
+
+            font-size:
+                17px;
+        }
+
+        .cta-button {
+            display:
+                inline-block;
+
+            padding:
+                14px 28px;
+
+            background:
+                var(--white);
+
+            color:
+                var(--accent);
+
+            border-radius:
+                50px;
+
+            font-weight:
+                800;
+
+            font-size:
+                15px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+            margin-top:
+                90px;
+
+            padding:
+                55px 25px 25px;
+
+            background:
+                var(--dark);
+
+            color:
+                var(--white);
+        }
+
+        .footer-inner {
+            max-width:
+                1100px;
+
+            margin:
+                auto;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+        }
+
+        .footer-brand h3 {
+            font-size:
+                25px;
+
+            margin-bottom:
+                10px;
+        }
+
+        .footer-brand p {
+            max-width:
+                450px;
+
+            color:
+                rgba(255,255,255,0.65);
+
+            font-size:
+                14px;
+        }
+
+        .footer-links {
+            display:
+                flex;
+
+            gap:
+                25px;
+
+            flex-wrap:
+                wrap;
+        }
+
+        .footer-links a {
+            color:
+                rgba(255,255,255,0.75);
+
+            font-size:
+                14px;
+
+            font-weight:
+                600;
+        }
+
+        .footer-bottom {
+            max-width:
+                1100px;
+
+            margin:
+                35px auto 0;
+
+            padding-top:
+                20px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+            text-align:
+                center;
+
+            color:
+                rgba(255,255,255,0.5);
+
+            font-size:
+                13px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .what-section {
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    30px;
+            }
+
+            .deliverables-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .price-row {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navigation {
+                display:
+                    none;
+            }
+
+            .service-hero {
+                padding:
+                    65px 20px;
+            }
+
+            .main-content {
+                padding:
+                    60px 20px;
+            }
+
+            .hero-title {
+                font-size:
+                    44px;
+
+                letter-spacing:
+                    -1px;
+            }
+
+            .hero-description {
+                font-size:
+                    17px;
+            }
+
+            .what-section h2,
+            .section-heading h2,
+            .client-section h2,
+            .cta-section h2 {
+                font-size:
+                    34px;
+            }
+
+            .client-section {
+                padding:
+                    45px 25px;
+            }
+
+            .pricing-top,
+            .price-row {
+                padding:
+                    28px 25px;
+            }
+
+            .note-section {
+                padding:
+                    30px 25px;
+            }
+
+            .cta-section {
+                padding:
+                    50px 25px;
+            }
+
+            .footer-inner {
+                flex-direction:
+                    column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+          <a href="index.html" class="logo">
+    <span class="united">United</span>
+    <span class="ballots">Ballots</span>
+</a>
+
+            <nav class="navigation">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+               
+
+                <a href="../services.html">
+                    Services
+                </a>
+
+               
+
+                <a href="../contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="service-hero">
+
+        <div class="hero-inner">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <h1 class="hero-title">
+                Public Affairs &amp; Policy Briefs
+            </h1>
+
+            <p class="hero-description">
+                Research-led policy briefing papers, legislative/regulatory
+                tracking, stakeholder mapping, and consultation-response drafting.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 WHAT IT IS
+            ================================================== -->
+
+            <section class="what-section">
+
+                <div>
+
+                    <div class="section-label">
+                        What It Is
+                    </div>
+
+                    <h2>
+                        Research-led policy intelligence
+                        for public affairs.
+                    </h2>
+
+                </div>
+
+
+                <div class="what-text">
+
+                    <p>
+                        Research-led policy briefing papers,
+                        legislative/regulatory tracking,
+                        stakeholder mapping, and
+                        consultation-response drafting.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DELIVERABLES
+            ================================================== -->
+
+            <section class="deliverables-section">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Deliverables
+                    </div>
+
+                    <h2>
+                        Clear policy insight,
+                        built for action.
+                    </h2>
+
+                </div>
+
+
+                <div class="deliverables-grid">
+
+
+                    <div class="deliverable-item">
+
+                        <div class="deliverable-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Policy Briefing
+                        </h3>
+
+                        <p>
+                            Policy briefing
+                            (5–15 pages)
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-item">
+
+                        <div class="deliverable-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Legislative Digest
+                        </h3>
+
+                        <p>
+                            Monthly legislative digest
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-item">
+
+                        <div class="deliverable-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Stakeholder Map
+                        </h3>
+
+                        <p>
+                            Stakeholder map
+                        </p>
+
+                    </div>
+
+
+                    <div class="deliverable-item">
+
+                        <div class="deliverable-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Consultation Response
+                        </h3>
+
+                        <p>
+                            Consultation response
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 IDEAL CLIENT
+            ================================================== -->
+
+            <section class="client-section">
+
+                <div class="section-label">
+                    Ideal Client
+                </div>
+
+                <h2>
+                    Built for teams navigating
+                    policy and public affairs.
+                </h2>
+
+                <p>
+                    Councillors and committee chairs, mayoral policy units,
+                    party policy forums, PPCs preparing for
+                    select-committee-style scrutiny.
+                </p>
+
+            </section>
+
+
+
+
+
+       
+
+
+
+            <!-- =================================================
+                 CTA
+            ================================================== -->
+
+            <section class="cta-section">
+
+                <h2>
+                    Public Affairs &amp; Policy Briefs
+                </h2>
+
+                <p>
+                    Research-led policy briefing papers, legislative/regulatory
+                    tracking, stakeholder mapping, and consultation-response drafting.
+                </p>
+
+                <a
+                    href="../contact.html"
+                    class="cta-button"
+                >
+                    Discuss This Service →
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+
+<!-- FOOTER -->
+
+<!-- =====================================================
+     PREMIUM FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <!-- Decorative Background -->
+    <div class="footer-glow footer-glow-one"></div>
+    <div class="footer-glow footer-glow-two"></div>
+
+    <div class="footer-container">
+
+        <!-- Footer Top -->
+        <div class="footer-top">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+               <div class="company">
+    <span class="united">United</span> <span class="ballots">Ballots</span>
+</div>
+
+                <p class="footer-description">
+                    Research, strategy and communication for
+                    political identity, public engagement and
+                    long-term accountability.
+                </p>
+
+                <div class="footer-tagline">
+                    Strategy. Identity. Impact.
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <span>01</span>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../services.html">
+                            <span>02</span>
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../insights.html">
+                            <span>03</span>
+                            Insights
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../contact.html">
+                            <span>04</span>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- Services -->
+            <div class="footer-column">
+
+                <h4>What We Do</h4>
+
+                <ul>
+                    <li>
+                        <a href="../services.html">
+                            Political Strategy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../services.html">
+                            Campaign Communication
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../services.html">
+                            Public Engagement
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../services.html">
+                            Brand & Identity
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <!-- Connect -->
+            <div class="footer-column footer-connect">
+
+                <h4>Let's Connect</h4>
+
+                <p>
+                    Have a vision, campaign or public
+                    initiative? Let's build something
+                    meaningful together.
+                </p>
+
+                <a href="../contact.html" class="footer-cta">
+                    Start a Conversation
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Divider -->
+        <div class="footer-divider"></div>
+
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 United Ballots. All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+            <div class="footer-back-top">
+                <a href="#top">
+                    Back to Top
+                    <span>↑</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>

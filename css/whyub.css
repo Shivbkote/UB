@@ -1,0 +1,2529 @@
+/* =====================================================
+   UNITED BALLOTS
+   HILLINGDON CASE STUDY
+   DESKTOP HEIGHT: 650px
+====================================================== */
+
+.ub-hillingdon-section {
+
+    position: relative;
+
+    height: 650px;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--navy) 0%,
+            var(--navy-2) 55%,
+            var(--blue) 100%
+        );
+
+    color: var(--white);
+
+    isolation: isolate;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+====================================================== */
+
+.ub-hillingdon-container {
+
+    width:
+        min(
+            calc(100% - 80px),
+            var(--container)
+        );
+
+    height: 100%;
+
+    margin-inline: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap:
+        clamp(
+            60px,
+            8vw,
+            120px
+        );
+
+}
+
+
+/* =====================================================
+   BACKGROUND GRID
+====================================================== */
+
+.ub-hillingdon-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    opacity: 0.06;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.4) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.4) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        70px 70px;
+
+}
+
+
+/* =====================================================
+   BACKGROUND GLOWS
+====================================================== */
+
+.ub-hillingdon-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+}
+
+
+.ub-glow-red {
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -330px;
+
+    right: -150px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(200,16,46,0.4),
+            transparent 70%
+        );
+
+    filter:
+        blur(10px);
+
+}
+
+
+.ub-glow-blue {
+
+    width: 450px;
+
+    height: 450px;
+
+    bottom: -330px;
+
+    left: -180px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(23,62,109,0.8),
+            transparent 70%
+        );
+
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+====================================================== */
+
+.ub-hillingdon-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width:
+        620px;
+
+}
+
+
+/* =====================================================
+   TOP META
+====================================================== */
+
+.ub-hillingdon-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.ub-hillingdon-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        10px;
+
+    color:
+        var(--red-light);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.17em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.ub-hillingdon-eyebrow span {
+
+    width:
+        35px;
+
+    height:
+        2px;
+
+    background:
+        var(--red);
+
+}
+
+
+.ub-hillingdon-number {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.12em;
+
+}
+
+
+/* =====================================================
+   TITLE
+====================================================== */
+
+.ub-hillingdon-title {
+
+    margin:
+        0;
+
+    color:
+        var(--white);
+
+    font-size:
+
+        clamp(
+            4rem,
+            6vw,
+            6.5rem
+        );
+
+    font-weight:
+        700;
+
+    line-height:
+        0.88;
+
+    letter-spacing:
+        -0.07em;
+
+}
+
+
+/* =====================================================
+   LOCATION
+====================================================== */
+
+.ub-hillingdon-location {
+
+    margin-top:
+        16px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.15em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =====================================================
+   TEXT
+====================================================== */
+
+.ub-hillingdon-text {
+
+    max-width:
+        590px;
+
+    margin-top:
+        25px;
+
+}
+
+
+.ub-hillingdon-text p {
+
+    margin:
+        0 0 13px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        );
+
+    font-size:
+        13px;
+
+    line-height:
+        1.65;
+
+}
+
+
+/* =====================================================
+   HIGHLIGHT
+====================================================== */
+
+.ub-hillingdon-text
+.ub-hillingdon-highlight {
+
+    position:
+        relative;
+
+    padding-left:
+        16px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    font-weight:
+        500;
+
+}
+
+
+.ub-hillingdon-highlight::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        3px;
+
+    width:
+        2px;
+
+    height:
+        calc(
+            100% - 6px
+        );
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            var(--red),
+            var(--red-light)
+        );
+
+}
+
+
+/* =====================================================
+   FOOTER BRAND LINE
+====================================================== */
+
+.ub-hillingdon-footer {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    margin-top:
+        20px;
+
+}
+
+
+.ub-hillingdon-footer span {
+
+    width:
+        45px;
+
+    height:
+        1px;
+
+    background:
+        var(--red);
+
+}
+
+
+.ub-hillingdon-footer strong {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.15em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =====================================================
+   RIGHT VISUAL
+====================================================== */
+
+.ub-hillingdon-visual {
+
+    position:
+        relative;
+
+    height:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+/* =====================================================
+   LARGE BACKGROUND TEXT
+====================================================== */
+
+.ub-hillingdon-word {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.025
+        );
+
+    font-size:
+        clamp(
+            5rem,
+            10vw,
+            10rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.08em;
+
+    white-space:
+        nowrap;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================================
+   MAIN CARD
+====================================================== */
+
+.ub-hillingdon-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    max-width:
+        450px;
+
+    height:
+        470px;
+
+    padding:
+        27px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+
+    border-radius:
+        var(--radius);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.11
+            ),
+            rgba(
+                255,
+                255,
+                255,
+                0.025
+            )
+        );
+
+    box-shadow:
+
+        0 35px 90px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+
+    backdrop-filter:
+        blur(18px);
+
+    transform:
+        rotate(
+            2deg
+        );
+
+    transition:
+        transform
+        0.5s ease,
+
+        box-shadow
+        0.5s ease;
+
+}
+
+
+.ub-hillingdon-card:hover {
+
+    transform:
+        rotate(
+            0deg
+        )
+        translateY(
+            -7px
+        );
+
+    box-shadow:
+
+        0 45px 110px
+        rgba(
+            0,
+            0,
+            0,
+            0.45
+        );
+
+}
+
+
+/* =====================================================
+   CARD INNER BORDER
+====================================================== */
+
+.ub-hillingdon-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        10px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    border-radius:
+
+        calc(
+            var(--radius) - 4px
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================================
+   RED GLOW
+====================================================== */
+
+.ub-hillingdon-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        280px;
+
+    height:
+        280px;
+
+    top:
+        -150px;
+
+    right:
+        -100px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(
+                200,
+                16,
+                46,
+                0.65
+            ),
+            transparent
+        );
+
+}
+
+
+/* =====================================================
+   CARD HEADER
+====================================================== */
+
+.ub-hillingdon-card-header {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.15em;
+
+}
+
+
+/* =====================================================
+   CARD CENTER
+====================================================== */
+
+.ub-hillingdon-card-center {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.ub-card-label {
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--red-light);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.15em;
+
+}
+
+
+.ub-hillingdon-card-center h3 {
+
+    margin:
+        0;
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(
+            3.5rem,
+            5vw,
+            5rem
+        );
+
+    font-weight:
+        700;
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        -0.07em;
+
+}
+
+
+.ub-card-divider {
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    margin:
+        24px 0;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+}
+
+
+/* =====================================================
+   STRATEGY FLOW
+====================================================== */
+
+.ub-strategy-flow {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.ub-strategy-step {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+}
+
+
+.ub-step-number {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    flex-shrink:
+        0;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+    border-radius:
+        50%;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.5
+        );
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+}
+
+
+.ub-strategy-step:first-child
+.ub-step-number {
+
+    color:
+        var(--white);
+
+    background:
+        var(--red);
+
+    border-color:
+        var(--red);
+
+}
+
+
+.ub-step-content strong {
+
+    display:
+        block;
+
+    color:
+        var(--white);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.08em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.ub-step-content small {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.4
+        );
+
+    font-size:
+        9px;
+
+}
+
+
+.ub-strategy-connector {
+
+    width:
+        1px;
+
+    height:
+        18px;
+
+    margin-left:
+        16px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+}
+
+
+/* =====================================================
+   CARD FOOTER
+====================================================== */
+
+.ub-hillingdon-card-footer {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    padding-top:
+        16px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.12em;
+
+}
+
+
+/* =====================================================
+   RESULT BADGE
+====================================================== */
+
+.ub-hillingdon-result {
+
+    position:
+        absolute;
+
+    right:
+        -15px;
+
+    bottom:
+        75px;
+
+    z-index:
+        10;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid
+        rgba(
+            7,
+            26,
+            58,
+            0.1
+        );
+
+    border-radius:
+        50px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.96
+        );
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.3
+        );
+
+    color:
+        var(--navy);
+
+    animation:
+        ubResultFloat
+        4s ease-in-out
+        infinite;
+
+}
+
+
+.ub-result-icon {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        25px;
+
+    height:
+        25px;
+
+    color:
+        var(--white);
+
+    background:
+        var(--red);
+
+    border-radius:
+        50%;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+}
+
+
+.ub-hillingdon-result strong {
+
+    display:
+        block;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+.ub-hillingdon-result small {
+
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        8px;
+
+}
+
+
+/* =====================================================
+   UB DECORATION
+====================================================== */
+
+.ub-hillingdon-ub {
+
+    position:
+        absolute;
+
+    left:
+        -25px;
+
+    top:
+        90px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.035
+        );
+
+    font-size:
+        120px;
+
+    font-weight:
+        900;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.1em;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================================
+   ANIMATION
+====================================================== */
+
+@keyframes ubResultFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(
+                0
+            );
+
+    }
+
+    50% {
+
+        transform:
+            translateY(
+                -8px
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   SCROLL REVEAL
+====================================================== */
+
+.ub-reveal {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(
+            30px
+        );
+
+    animation:
+        ubCaseReveal
+        0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        forwards;
+
+}
+
+
+.ub-hillingdon-visual {
+
+    animation-delay:
+        0.15s;
+
+}
+
+
+@keyframes ubCaseReveal {
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(
+                0
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 1000px) {
+
+    .ub-hillingdon-container {
+
+        width:
+            calc(
+                100% - 50px
+            );
+
+        gap:
+            40px;
+
+    }
+
+
+    .ub-hillingdon-title {
+
+        font-size:
+            4rem;
+
+    }
+
+
+    .ub-hillingdon-text p {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .ub-hillingdon-card {
+
+        height:
+            450px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 700px) {
+
+    .ub-hillingdon-section {
+
+        height:
+            auto;
+
+        min-height:
+            auto;
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .ub-hillingdon-container {
+
+        width:
+            calc(
+                100% - 32px
+            );
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            60px;
+
+    }
+
+
+    .ub-hillingdon-title {
+
+        font-size:
+            clamp(
+                3.5rem,
+                18vw,
+                5rem
+            );
+
+    }
+
+
+    .ub-hillingdon-text p {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    .ub-hillingdon-visual {
+
+        height:
+            500px;
+
+    }
+
+
+    .ub-hillingdon-card {
+
+        width:
+            100%;
+
+        height:
+            450px;
+
+        transform:
+            none;
+
+    }
+
+
+    .ub-hillingdon-card:hover {
+
+        transform:
+            translateY(
+                -5px
+            );
+
+    }
+
+
+    .ub-hillingdon-result {
+
+        right:
+            0;
+
+        bottom:
+            25px;
+
+    }
+
+
+    .ub-hillingdon-ub {
+
+        left:
+            0;
+
+        top:
+            50px;
+
+        font-size:
+            80px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 400px) {
+
+    .ub-hillingdon-container {
+
+        width:
+            calc(
+                100% - 24px
+            );
+
+    }
+
+
+    .ub-hillingdon-card {
+
+        padding:
+            22px;
+
+    }
+
+
+    .ub-hillingdon-card-center h3 {
+
+        font-size:
+            3.3rem;
+
+    }
+
+
+    .ub-hillingdon-result {
+
+        padding:
+            10px 14px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ub-reveal,
+    .ub-hillingdon-result {
+
+        animation:
+            none !important;
+
+        opacity:
+            1;
+
+        transform:
+            none;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   UNITED BALLOTS
+   CAMPAIGN TESTIMONIAL
+====================================================== */
+
+.ub-testimonial-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        100px 0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--off-white) 0%,
+            var(--white) 60%,
+            var(--paper) 100%
+        );
+
+    color:
+        var(--navy);
+
+    isolation:
+        isolate;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+====================================================== */
+
+.ub-testimonial-container {
+
+    position:
+        relative;
+
+    width:
+        min(
+            calc(100% - 80px),
+            var(--container)
+        );
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.32fr 0.68fr;
+
+    align-items:
+        center;
+
+    gap:
+        clamp(
+            60px,
+            8vw,
+            120px
+        );
+
+}
+
+
+/* =====================================================
+   BACKGROUND GRID
+====================================================== */
+
+.ub-testimonial-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        -2;
+
+    opacity:
+        0.035;
+
+    background-image:
+
+        linear-gradient(
+            var(--navy) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            var(--navy) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        70px 70px;
+
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+====================================================== */
+
+.ub-testimonial-glow {
+
+    position:
+        absolute;
+
+    width:
+        500px;
+
+    height:
+        500px;
+
+    right:
+        -250px;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(
+                200,
+                16,
+                46,
+                0.09
+            ),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+
+}
+
+
+/* =====================================================
+   LEFT BRAND AREA
+====================================================== */
+
+.ub-testimonial-brand {
+
+    position:
+        relative;
+
+    min-height:
+        320px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* =====================================================
+   GIANT QUOTE MARK
+====================================================== */
+
+.ub-quote-mark {
+
+    position:
+        absolute;
+
+    top:
+        -75px;
+
+    left:
+        -30px;
+
+    color:
+        rgba(
+            200,
+            16,
+            46,
+            0.08
+        );
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        300px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================================
+   LABEL
+====================================================== */
+
+.ub-testimonial-label {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        var(--red);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.16em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.ub-testimonial-label span {
+
+    width:
+        35px;
+
+    height:
+        2px;
+
+    background:
+        var(--red);
+
+}
+
+
+/* =====================================================
+   BRAND NAME
+====================================================== */
+
+.ub-testimonial-brand-name {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    color:
+        var(--navy);
+
+    font-size:
+        clamp(
+            2rem,
+            3vw,
+            3.5rem
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        -0.06em;
+
+}
+
+
+.ub-testimonial-brand-name strong {
+
+    color:
+        var(--red);
+
+}
+
+
+/* =====================================================
+   CONTENT
+====================================================== */
+
+.ub-testimonial-content {
+
+    position:
+        relative;
+
+    max-width:
+        850px;
+
+    padding:
+        50px 0;
+
+}
+
+
+/* =====================================================
+   QUOTE
+====================================================== */
+
+.ub-testimonial-content blockquote {
+
+    position:
+        relative;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+}
+
+
+.ub-testimonial-content blockquote::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        -25px;
+
+    top:
+        7px;
+
+    width:
+        3px;
+
+    height:
+        70px;
+
+    border-radius:
+        5px;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            var(--red),
+            var(--navy)
+        );
+
+}
+
+
+.ub-testimonial-content blockquote p {
+
+    margin:
+        0;
+
+    color:
+        var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            1.35rem,
+            2.1vw,
+            2.05rem
+        );
+
+    font-style:
+        italic;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.45;
+
+    letter-spacing:
+        -0.02em;
+
+}
+
+
+/* =====================================================
+   AUTHOR
+====================================================== */
+
+.ub-testimonial-author {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-top:
+        35px;
+
+}
+
+
+.ub-author-line {
+
+    width:
+        45px;
+
+    height:
+        2px;
+
+    flex-shrink:
+        0;
+
+    background:
+        var(--red);
+
+}
+
+
+.ub-author-info {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+
+}
+
+
+.ub-author-info strong {
+
+    color:
+        var(--navy);
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.01em;
+
+}
+
+
+.ub-author-info span {
+
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.04em;
+
+}
+
+
+/* =====================================================
+   BOTTOM KEYWORDS
+====================================================== */
+
+.ub-testimonial-bottom {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-top:
+        40px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+}
+
+
+.ub-testimonial-bottom span {
+
+    color:
+        var(--muted);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.13em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.ub-testimonial-bottom i {
+
+    width:
+        4px;
+
+    height:
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--red);
+
+}
+
+
+/* =====================================================
+   REVEAL ANIMATION
+====================================================== */
+
+.ub-testimonial-reveal {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(
+            30px
+        );
+
+    animation:
+
+        ubTestimonialReveal
+        0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        forwards;
+
+}
+
+
+.ub-testimonial-content {
+
+    animation-delay:
+        0.15s;
+
+}
+
+
+@keyframes ubTestimonialReveal {
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(
+                0
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 900px) {
+
+    .ub-testimonial-section {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .ub-testimonial-container {
+
+        width:
+            calc(
+                100% - 50px
+            );
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            30px;
+
+    }
+
+
+    .ub-testimonial-brand {
+
+        min-height:
+            auto;
+
+        display:
+            flex;
+
+        flex-direction:
+            row;
+
+        align-items:
+            center;
+
+        justify-content:
+            space-between;
+
+    }
+
+
+    .ub-quote-mark {
+
+        top:
+            -90px;
+
+        left:
+            -20px;
+
+        font-size:
+            240px;
+
+    }
+
+
+    .ub-testimonial-brand-name {
+
+        text-align:
+            right;
+
+    }
+
+
+    .ub-testimonial-content {
+
+        padding:
+            30px 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+
+    .ub-testimonial-section {
+
+        padding:
+            65px 0;
+
+    }
+
+
+    .ub-testimonial-container {
+
+        width:
+            calc(
+                100% - 32px
+            );
+
+        gap:
+            20px;
+
+    }
+
+
+    .ub-testimonial-brand {
+
+        min-height:
+            150px;
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        justify-content:
+            space-between;
+
+    }
+
+
+    .ub-testimonial-label {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .ub-testimonial-label span {
+
+        width:
+            25px;
+
+    }
+
+
+    .ub-testimonial-brand-name {
+
+        font-size:
+            2.2rem;
+
+        text-align:
+            left;
+
+    }
+
+
+    .ub-quote-mark {
+
+        top:
+            -60px;
+
+        right:
+            -10px;
+
+        left:
+            auto;
+
+        font-size:
+            190px;
+
+    }
+
+
+    .ub-testimonial-content {
+
+        padding:
+            20px 0;
+
+    }
+
+
+    .ub-testimonial-content blockquote::before {
+
+        left:
+            0;
+
+        top:
+            -25px;
+
+        width:
+            45px;
+
+        height:
+            3px;
+
+    }
+
+
+    .ub-testimonial-content blockquote p {
+
+        padding-top:
+            25px;
+
+        font-size:
+            1.2rem;
+
+        line-height:
+            1.55;
+
+    }
+
+
+    .ub-testimonial-author {
+
+        align-items:
+            flex-start;
+
+        gap:
+            12px;
+
+        margin-top:
+            28px;
+
+    }
+
+
+    .ub-author-line {
+
+        width:
+            30px;
+
+        margin-top:
+            7px;
+
+    }
+
+
+    .ub-author-info strong {
+
+        font-size:
+            12px;
+
+        line-height:
+            1.4;
+
+    }
+
+
+    .ub-author-info span {
+
+        font-size:
+            9px;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    .ub-testimonial-bottom {
+
+        flex-wrap:
+            wrap;
+
+        margin-top:
+            30px;
+
+        gap:
+            8px;
+
+    }
+
+
+    .ub-testimonial-bottom span {
+
+        font-size:
+            8px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+====================================================== */
+
+@media (max-width: 380px) {
+
+    .ub-testimonial-container {
+
+        width:
+            calc(
+                100% - 24px
+            );
+
+    }
+
+
+    .ub-testimonial-content blockquote p {
+
+        font-size:
+            1.08rem;
+
+    }
+
+
+    .ub-testimonial-brand-name {
+
+        font-size:
+            1.9rem;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ub-testimonial-reveal {
+
+        animation:
+            none;
+
+        opacity:
+            1;
+
+        transform:
+            none;
+
+    }
+
+}

@@ -1,0 +1,565 @@
+
+/* =====================================================
+   PREMIUM FOOTER
+====================================================== */
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(30, 76, 115, 0.22),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #071522 0%,
+            #0b1d2d 50%,
+            #06111d 100%
+        );
+
+    color: #ffffff;
+    padding: 90px 0 25px;
+    isolation: isolate;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+====================================================== */
+
+.footer-container {
+    width: min(1200px, 90%);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   FOOTER TOP
+====================================================== */
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.4fr;
+    gap: 60px;
+    padding-bottom: 70px;
+}
+
+
+/* =====================================================
+   BRAND
+====================================================== */
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+
+    text-decoration: none;
+    margin-bottom: 22px;
+
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: translateX(4px);
+}
+
+
+.logo-united {
+    color: #ffffff;
+}
+
+.logo-ballots {
+    color: #d62f3d;
+}
+
+
+.footer-description {
+    max-width: 340px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+.footer-tagline {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    padding-left: 15px;
+
+    border-left: 3px solid #d62f3d;
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+====================================================== */
+
+.footer-column h4 {
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+
+.footer-column h4::after {
+    content: "";
+
+    display: block;
+
+    width: 28px;
+    height: 2px;
+
+    background: #d62f3d;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+====================================================== */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.footer-column li {
+    margin-bottom: 14px;
+}
+
+
+.footer-column a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.footer-column a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   NUMBERED NAVIGATION
+====================================================== */
+
+.footer-column li a span {
+    color: #d62f3d;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-right: 10px;
+
+    opacity: 0.8;
+}
+
+
+/* =====================================================
+   CONNECT SECTION
+====================================================== */
+
+.footer-connect p {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    max-width: 280px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   FOOTER CTA
+====================================================== */
+
+.footer-cta {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 20px;
+
+    color: #ffffff !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-radius: 4px;
+
+    font-size: 13px !important;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease !important;
+}
+
+
+.footer-cta span {
+    color: #d62f3d;
+    font-size: 18px;
+}
+
+
+.footer-cta:hover {
+    background: #d62f3d;
+    border-color: #d62f3d;
+
+    transform: translateY(-3px) !important;
+}
+
+
+.footer-cta:hover span {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   DIVIDER
+====================================================== */
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.18),
+        transparent
+    );
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+====================================================== */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-top: 25px;
+}
+
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+.footer-bottom-links {
+    display: flex;
+    gap: 25px;
+}
+
+
+.footer-bottom-links a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.footer-bottom-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   BACK TO TOP
+====================================================== */
+
+.footer-back-top a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.footer-back-top span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.footer-back-top a:hover {
+    color: #ffffff;
+}
+
+
+.footer-back-top a:hover span {
+    background: #d62f3d;
+    border-color: #d62f3d;
+}
+
+
+/* =====================================================
+   DECORATIVE GLOW
+====================================================== */
+
+.footer-glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    z-index: 0;
+}
+
+
+.footer-glow-one {
+    top: -150px;
+    left: -100px;
+
+    background: #2d75a8;
+}
+
+
+.footer-glow-two {
+    right: -150px;
+    bottom: -150px;
+
+    background: #d62f3d;
+}
+
+
+/* =====================================================
+   SUBTLE FOOTER REVEAL
+====================================================== */
+
+.footer-top,
+.footer-bottom {
+    animation: footerReveal 0.8s ease both;
+}
+
+
+@keyframes footerReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-top {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 45px;
+    }
+
+    .footer-connect {
+        grid-column: span 3;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 700px) {
+
+    .footer {
+        padding: 65px 0 25px;
+    }
+
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 45px;
+    }
+
+
+    .footer-connect {
+        grid-column: auto;
+    }
+
+
+    .footer-logo {
+        font-size: 27px;
+    }
+
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+
+    .footer-back-top {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-top,
+    .footer-bottom {
+        animation: none;
+    }
+
+    .footer-logo,
+    .footer-column a,
+    .footer-cta,
+    .footer-back-top a,
+    .footer-back-top span {
+        transition: none;
+    }
+
+}
+
+.company {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.company .united {
+    color: #dbe6ee; /* Dark Blue */
+}
+
+.company .ballots {
+    color: #C62828; /* Red */
+}
+
+
+
+.logo {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo .united {
+    color: #123B5D; /* Dark Blue */
+}
+
+.logo .ballots {
+    color: #D62828; /* Red */
+}
