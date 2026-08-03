@@ -206,7 +206,7 @@ p {
 }
 
 .nav-menu a {
-    color: var(--navy);
+    color: var(--red-dark);
     font-size: 14px;
     font-weight: 600;
     transition: var(--transition);
@@ -261,7 +261,7 @@ p {
 
     width: 22px;
     height: 4px;
-   gap: ;
+ 
 
     margin: 4px;
 
