@@ -1858,6 +1858,127 @@ Start a Conversation
 
 <script src="js/main.js"></script>
 
+
+
+<!-- COOKIE BAR -->
+
+<div class="cookie-bar" id="cookieBar">
+
+    <div class="cookie-left">
+
+        <div class="cookie-icon">
+            🍪
+        </div>
+
+        <div>
+            <h3>Your Privacy Matters</h3>
+
+            <p>
+                We use cookies to improve your website experience.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="cookie-buttons">
+
+        <button id="cookieReject" class="reject-btn">
+            Essential Only
+        </button>
+
+        <button id="cookieAccept" class="accept-btn">
+            Accept All
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+
+    const cookieBar = document.getElementById("cookieBar");
+
+    const acceptButton = document.getElementById("cookieAccept");
+
+    const rejectButton = document.getElementById("cookieReject");
+
+
+
+    // Show only first time
+
+    if(localStorage.getItem("cookieConsent") === null){
+
+
+        setTimeout(()=>{
+
+            cookieBar.classList.add("show");
+
+        },800);
+
+
+    }
+
+
+
+    function closeCookieBar(){
+
+
+        cookieBar.classList.remove("show");
+
+
+        setTimeout(()=>{
+
+            cookieBar.style.display="none";
+
+        },500);
+
+
+    }
+
+
+
+    acceptButton.onclick = function(){
+
+
+        localStorage.setItem(
+            "cookieConsent",
+            "accepted"
+        );
+
+
+        closeCookieBar();
+
+
+    };
+
+
+
+    rejectButton.onclick = function(){
+
+
+        localStorage.setItem(
+            "cookieConsent",
+            "essential"
+        );
+
+
+        closeCookieBar();
+
+
+    };
+
+
+});
+
+</script>
+
+
+
+
 </body>
 
 </html>
