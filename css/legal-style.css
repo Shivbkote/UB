@@ -1,0 +1,667 @@
+/* =========================================
+   UNITED BALLOTS
+   LEGAL PAGES STYLE
+   Privacy Policy + Terms Conditions
+========================================= */
+
+
+:root{
+
+    --red:#c8102e;
+    --red-dark:#980d24;
+    --red-light:#e53950;
+
+    --navy:#071a3a;
+    --navy-2:#0d2852;
+    --blue:#173e6d;
+
+    --white:#ffffff;
+    --paper:#eef1f5;
+    --off-white:#f7f8fa;
+
+    --text:#101828;
+    --muted:#667085;
+
+    --border:
+    rgba(7,26,58,.12);
+
+    --shadow:
+    0 25px 70px rgba(7,26,58,.12);
+
+    --radius:22px;
+
+}
+
+
+/* ================================
+RESET
+================================ */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:
+
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #ffffff,
+    #f6f8fb
+    );
+
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+
+/* ================================
+CONTAINER
+================================ */
+
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+
+
+/* ================================
+HEADER
+================================ */
+
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+
+    rgba(255,255,255,.85);
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+    border-bottom:
+
+    1px solid var(--border);
+
+}
+
+
+
+.nav{
+
+    height:85px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    color:var(--navy);
+
+}
+
+
+.logo span{
+
+    color:var(--red);
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--muted);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover,
+nav a.active{
+
+
+    color:var(--red);
+
+}
+
+
+
+/* ================================
+LEGAL HERO
+================================ */
+
+
+.legal-hero{
+
+    padding:
+
+    90px 0 80px;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--navy),
+    var(--navy-2)
+    );
+
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.legal-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    right:-120px;
+
+    top:-120px;
+
+
+    background:
+
+    rgba(200,16,46,.35);
+
+
+    filter:blur(80px);
+
+    border-radius:50%;
+
+}
+
+
+
+.legal-hero h1{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:
+
+    clamp(38px,5vw,60px);
+
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.legal-hero p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:650px;
+
+    font-size:20px;
+
+    color:
+
+    rgba(255,255,255,.8);
+
+}
+
+
+
+.date{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:25px;
+
+    padding:15px 22px;
+
+    display:inline-block;
+
+    border-radius:14px;
+
+
+    background:
+
+    rgba(255,255,255,.1);
+
+
+    border:
+
+    1px solid
+
+    rgba(255,255,255,.2);
+
+
+    color:white;
+
+}
+
+
+
+/* ================================
+CONTENT
+================================ */
+
+
+.legal-content{
+
+    padding:
+
+    80px 0;
+
+}
+
+
+
+.policy-card{
+
+    background:white;
+
+
+    padding:
+
+    40px;
+
+
+    margin-bottom:30px;
+
+
+    border-radius:
+
+    var(--radius);
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    box-shadow:
+
+    0 15px 40px
+
+    rgba(7,26,58,.06);
+
+
+    transition:.35s;
+
+}
+
+
+
+.policy-card:hover{
+
+    transform:
+
+    translateY(-5px);
+
+
+    box-shadow:
+
+    var(--shadow);
+
+}
+
+
+
+.policy-card h2{
+
+    color:
+
+    var(--navy);
+
+
+    font-size:28px;
+
+
+    margin-bottom:20px;
+
+
+    position:relative;
+
+}
+
+
+
+.policy-card h2::after{
+
+
+    content:"";
+
+
+    display:block;
+
+
+    width:55px;
+
+
+    height:4px;
+
+
+    margin-top:10px;
+
+
+    border-radius:20px;
+
+
+    background:
+
+    var(--red);
+
+}
+
+
+
+.policy-card p{
+
+    color:
+
+    var(--muted);
+
+
+    margin-bottom:18px;
+
+}
+
+
+
+.policy-card strong{
+
+    color:
+
+    var(--navy);
+
+}
+
+
+
+.policy-card ul{
+
+    margin:
+
+    20px 0 20px 25px;
+
+
+}
+
+
+
+.policy-card li{
+
+    margin-bottom:10px;
+
+    color:
+
+    var(--muted);
+
+    position:relative;
+
+}
+
+
+
+.policy-card li::marker{
+
+    color:
+
+    var(--red);
+
+}
+
+
+
+/* ================================
+FOOTER
+================================ */
+
+
+footer{
+
+    background:
+
+    var(--navy);
+
+
+    color:
+
+    rgba(255,255,255,.75);
+
+
+    padding:
+
+    35px 0;
+
+
+    text-align:center;
+
+
+    font-size:15px;
+
+}
+
+
+
+/* ================================
+SCROLL EFFECT
+================================ */
+
+
+.policy-card{
+
+    animation:
+
+    fadeUp .6s ease both;
+
+}
+
+
+
+@keyframes fadeUp{
+
+
+from{
+
+    opacity:0;
+
+    transform:
+    translateY(30px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+
+}
+
+
+
+/* ================================
+RESPONSIVE
+================================ */
+
+
+@media(max-width:800px){
+
+
+.nav{
+
+    height:auto;
+
+    padding:20px 0;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+nav{
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+
+.legal-hero{
+
+    padding:60px 0;
+
+}
+
+
+
+.policy-card{
+
+    padding:25px;
+
+}
+
+
+
+.policy-card h2{
+
+    font-size:23px;
+
+}
+
+
+
+.legal-hero p{
+
+    font-size:17px;
+
+}
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+.logo{
+
+    font-size:24px;
+
+}
+
+
+
+nav a{
+
+    font-size:14px;
+
+}
+
+
+
+.policy-card{
+
+    border-radius:16px;
+
+}
+
+
+}
